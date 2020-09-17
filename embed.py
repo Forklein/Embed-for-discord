@@ -3,13 +3,13 @@ import sys
 
 licenze = input('Inserisci la licenza ')
 if licenze == ('betaforklein'):
-    print(' La licenza è corretta')
+    print('La licenza è corretta')
 else:
-    print(' La licenza inserita non è corretta')
+    print('La licenza inserita non è corretta')
     sys.exit()
 
 
-print(r'''Apuliaresell Embed made by Forklein''')
+print(r'''Embed Sender made by Forklein''')
 
 ollare = input('Inserisci il tuo webhook: ')
 print('Il tuo webhook è ' + ollare )
@@ -22,21 +22,18 @@ print('La descrizione è ' + descrizione )
 autore = input('Inserisci autore: ')
 print('Autore è ' + autore )
 immagine = input('Inserisci url dell immagine: ')
-print('Immagine è' + immagine)
+print('Immagine è ' + immagine)
 foter = input('Inserisci il testo del footer: ')
-print('Il footer è' + foter)
+print('Il footer è ' + foter)
 campo = input('Inserisci il nome del campo: ')
 test = input('Inserisci la descrizione del campo: ')
 
 webhook = DiscordWebhook(url= ollare)
-embed = DiscordEmbed(title= titolo,
-                     description= descrizione,
-                     color= hex_list
-                     )
+embed = DiscordEmbed(title= titolo, description= descrizione, color= hex_list)
 embed.set_author(name= autore, icon_url='')
 embed.set_image(url='')
 embed.set_thumbnail(url= immagine)
-embed.set_footer(text= footer, icon_url= immagine)
+embed.set_footer(text= foter, icon_url= immagine)
 embed.set_timestamp()
 embed.add_embed_field(name= campo, value= test, inline='false')
 webhook.add_embed(embed)
