@@ -1,12 +1,14 @@
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import sys
 
-licenze = input('Inserisci la licenza ')
-if licenze == ('betaforklein'):
-    print('La licenza è corretta')
-else:
-    print('La licenza inserita non è corretta')
-    sys.exit()
+gang = False
+while gang == False:
+    licenze = input('Inserisci la licenza ')
+    if licenze == ('betaforklein'):
+         print('La licenza è corretta!')
+         gang = True
+    else:
+         print('La licenza inserita non è corretta,riprovare')
 
 
 print(r'''Embed Sender made by Forklein''')
