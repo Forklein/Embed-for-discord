@@ -1,4 +1,5 @@
 from discord_webhook import DiscordWebhook, DiscordEmbed
+from getch import pause
 import sys
 
 gang = False
@@ -41,3 +42,4 @@ embed.add_embed_field(name= campo, value= test, inline='false')
 webhook.add_embed(embed)
 response = webhook.execute()
 print('Embed inviato correttamente')
+pause('Premi qualsiasi tasto per uscire')
